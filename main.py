@@ -27,5 +27,5 @@ while True:
     blizzard_news_scrapper(driver, WebDriverWait, By, EC)
    
     # Sleep for 1 min then continue
-    time.sleep(60)
+    time.sleep(60 * 5)
 
