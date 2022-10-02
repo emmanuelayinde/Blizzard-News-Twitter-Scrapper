@@ -60,7 +60,7 @@ def scrape_news(driver, wait, By, EC, url_link):
     print(text, img_href)
 
     # UPLOAD TO TWITTER
-    # tweet(text, media = img_href)
+    tweet(text, media = img_href)
     
     time.sleep(5)
     driver.quit() 
