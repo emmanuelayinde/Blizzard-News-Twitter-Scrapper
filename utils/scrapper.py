@@ -20,10 +20,9 @@ def blizzard_news_scrapper(driver, WebDriverWait, By, EC):
     for new_url in all_news_links:
         tweeted = False
         with open(path +"/data/tweeted_news.txt") as f:
-            for line in f:
-                if line.strip() == new_url.get_attribute('href'):
-                    tweeted = True
-                    break
+            if new_url.get_attribute('href') in f.read():
+                tweeted = True
+                break
         if tweeted:
             continue  
         else: 
